@@ -18,6 +18,15 @@
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/common.css">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js'></script>
     <script src="{{ .Site.BaseURL }}js/bootstrap.bundle.min.js"></script> 
+    <script type='text/javascript'>
+        window.talktype = window.talktype || function(f) {
+          if (talktype.loaded)
+            f();
+          else
+            (talktype.q = talktype.q || []).push(arguments);
+        };
+      </script>
+      <script src='https://www.metype.com/quintype-metype/assets/metype.js'></script>
     <!-- Only include the tracking when using `hugo` or adding `--environment production` -->
     {{ if eq hugo.Environment "production" }}
         {{ template "_internal/google_analytics_async.html" . }}
