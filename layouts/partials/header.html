@@ -3,11 +3,11 @@
         <div class="container">
             <a class="navbar-brand me-4 order-lg-1" href="{{ .Site.BaseURL | relLangURL }}">
                 {{ with .Site.Params.site_logo }}
-                <img src="{{ . }}" />
+                <img class="d-md-none" width="30" src="{{ . }}" alt="Zerodemy Books Logo"/>
                 {{ end }}
-                <div class="navbar-tool-text ms-n3" style="display:block!important">
-                    <span>{{ .Site.Title }}</span><br>
-                    <span>{{ .Site.Params.subtitle }}</span>
+                <div class="navbar-tool-text ms-n3 d-none d-md-block">
+                    <span class="fw-bold">{{ .Site.Params.title_bn }}</span><br>
+                    <span>{{ .Site.Params.subtitle_bn }}</span>
                 </div>
             </a>
             <div class="navbar-toolbar d-flex align-items-center order-lg-3">
