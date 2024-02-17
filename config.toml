@@ -1,8 +1,8 @@
 baseURL = "https://zerodemy.com"
 title = "Zerodemy Books"
 languageCode = "bn-BD"
-DefaultContentLanguage = "en"
-defaultContentLanguage = "en"
+DefaultContentLanguage = "bn"
+defaultContentLanguage = "bn"
 defaultContentLanguageInSubdir= false
 enableMissingTranslationPlaceholders = false
 
@@ -12,14 +12,9 @@ paginate = 10
 googleAnalytics = ""
 
 [params]
-ordersectionsby = "weight" # ordersectionsby = "title"
-disableSearch = false # default is false
-disableReadmoreNav = false # set true to hide prev/next navigation, default is false
-highlightClientSide = false # set true to use highlight.pack.js instead of the default hugo chroma highlighter
-menushortcutsnewtab = true # set true to open shortcuts links to a new tab/window
 subtitle = "Collection of Bengali Books"
 subtitle_bn = "বাংলা বইয়ের সংগ্রহশালা"
-siteURL = "https://zerodemy.com"
+siteURL = "https://books.zerodemy.com"
 title_bn = "জিরোডেমি বই"
 site_logo = "/images/logo temporary.png" 
 
