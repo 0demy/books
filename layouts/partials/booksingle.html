@@ -4,7 +4,7 @@
             <div class="book-thumb">
                 <a class="d-block" href="{{ .Permalink }}">
                     <img alt="Cover of the book {{ .Title }}" class="ml-auto mx-auto d-block" 
-                    src='{{if isset .Params "thumb"}} {{ .Site.Params.siteURL }}/assets/img/books/{{ .Params.thumb }} {{else if isset .Params "img"}}  {{ .Params.img }} {{ else }}https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnSJ4EHEjSc0tnEn6ZFtNomhsEy-ORV79y7Gu3Yob9rQ&s{{end}}' style="width: 150px; height: 210px;">
+                    src='{{if isset .Params "thumb"}} {{ .Site.Params.mainURL }}/assets/img/books/{{ .Params.thumb }} {{else if isset .Params "img"}}  {{ .Params.img }} {{ else }}https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnSJ4EHEjSc0tnEn6ZFtNomhsEy-ORV79y7Gu3Yob9rQ&s{{end}}' style="width: 150px; height: 210px;">
                 </a>
             </div>
             <div class="books-desc pt-3 text-center">

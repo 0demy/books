@@ -14,9 +14,10 @@ googleAnalytics = ""
 [params]
 subtitle = "Collection of Bengali Books"
 subtitle_bn = "বাংলা বইয়ের সংগ্রহশালা"
+mainURL = "https://zerodemy.com"
 siteURL = "https://books.zerodemy.com"
 title_bn = "জিরোডেমি বই"
-site_logo = "/images/logo temporary.png" 
+site_logo = "https://zerodemy.com/dist/img/logo temporary.png" 
 
 [markup]
   [markup.goldmark]
