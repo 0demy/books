@@ -6,7 +6,7 @@
     {{ range .Site.RegularPages }}
     {{ if and (eq (path.Dir .File.Dir) $currentDir) (ne .Permalink $.Permalink) }}
     {{ if lt $count $maxPosts }}
-    {{ partial "booksingle.html" . }}
+    {{ partial "item_single.html" . }}
     {{ $count = add $count 1 }}
     {{ end }}
     {{ end }}

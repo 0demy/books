@@ -23,21 +23,23 @@
     </div>
 
     {{ if gt (len .RegularPages) 0 }} <h2> {{ .Title }}</h2>{{ end }}
-    <ul class="books-list list-unstyled row row-cols-2 no-gutters row-cols-md-3 row-cols-lg-5 row-cols-wd-6 border-top border-left my-0">
+    <ul
+        class="books-list list-unstyled row row-cols-2 no-gutters row-cols-md-3 row-cols-lg-5 row-cols-wd-6 border-top border-left my-0">
         {{ range .Paginator.Pages }}
-        {{ partial "booksingle.html" . }}
+        {{ partial "item_single.html" . }}
         {{ end }}
     </ul>
     <div class="pagination">{{ template "_internal/pagination.html" . }}</div>
-
-    {{/*  {{ if gt (len .RegularPages) 0 }} {{ partial "title" . }}
+    {{- /* {{ if gt (len .RegularPages) 0 }} {{ partial "title" . }}
     {{ .Content }}
     {{end}}
-    
-    <ul class="books-list list-unstyled row row-cols-2 no-gutters row-cols-md-3 row-cols-lg-5 row-cols-wd-6 border-top border-left my-0">
+
+    <ul
+        class="books-list list-unstyled row row-cols-2 no-gutters row-cols-md-3 row-cols-lg-5 row-cols-wd-6 border-top border-left my-0">
         {{ $currentSection := .Section }}
         {{ range .Site.RegularPages }}
-            {{ if (and (ge (len .Section) (len $currentSection)) (eq (substr .Section 0 (len $currentSection)) $currentSection)) }}
+        {{ if (and (ge (len .Section) (len $currentSection)) (eq (substr .Section 0 (len $currentSection))
+        $currentSection)) }}
         <li class="book-item">
             <div class="book-box overflow-hidden bg-white p-3 h-100">
                 <div class="book-box wrapper d-block position-relative h-100">
@@ -60,7 +62,6 @@
         </li>
         {{ end }}
         {{ end }}
-    </ul>  */}}
-
+    </ul> */ -}}
 </div>
 {{ end }}

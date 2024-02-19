@@ -5,19 +5,22 @@ DefaultContentLanguage = "bn"
 defaultContentLanguage = "bn"
 defaultContentLanguageInSubdir= false
 enableMissingTranslationPlaceholders = false
-
 paginate = 10
 
 # Enable Google Analytics by entering your tracking id
 googleAnalytics = ""
 
 [params]
-subtitle = "Collection of Bengali Books"
-subtitle_bn = "বাংলা বইয়ের সংগ্রহশালা"
-mainURL = "https://zerodemy.com"
-siteURL = "https://books.zerodemy.com"
-title_bn = "জিরোডেমি বই"
-site_logo = "https://zerodemy.com/dist/img/logo temporary.png" 
+siteSubTitle = "Collection of Bengali Books"
+siteSubTitleBN = "বাংলা বইয়ের সংগ্রহশালা"
+mainURL = "https://zerodemy.com/"
+siteURL = "https://books.zerodemy.com/"
+siteName = "জিরোডেমি বই"
+siteNames = [ "জিরোডেমি বই", "ZeroBooks", "0dmey Books" ]
+siteLang = "bn-BD"
+siteLogo = "https://zerodemy.com/dist/img/logo%20temporary.png"
+
+
 
 [markup]
   [markup.goldmark]
