@@ -6,17 +6,32 @@
 </div>
 <div class="container pb-5 mb-2 mb-md-4">
 	<div class="bg-light shadow-lg rounded-3 p-4 mt-n5 mb-4">
-		{{/*  <script async src="https://cse.google.com/cse.js?cx=a3eaf405be35e4a4b">  */}}
-	<script async src="{{ .Site.BaseURL }}js/gsearch.js">
-	</script>
-	<div class="gcse-search"></div>
+		{{/* <script async src="https://cse.google.com/cse.js?cx=a3eaf405be35e4a4b">  */}}
+		<script async src = "{{ .Site.BaseURL }}js/gsearch.js" ></script>
+		<div class="gcse-search"></div>
 	</div>
 	<div id="search-results" class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 gy-sm-4 gy-3 pt-sm-3">
 	</div>
 </div>
 <style>
-	.gcsc-more-maybe-branding-root {
-	display: none;
-}
+	.gcsc-more-maybe-branding-root,
+	.gsc-url-top {
+		display: none!important;
+	}
+
+	.gsc-expansionArea {
+		--auto-grid-min-size: 16rem;
+		display: grid;
+		grid-gap: .5rem;
+		grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+	}
+
+	.gsc-webResult .gsc-result {
+		font-size: 24px;
+		padding: 1rem 1rem;
+		font-weight: 600;
+        background: ghostwhite;
+        border-radius: 1rem;
+	}
 </style>
 {{ end}}
