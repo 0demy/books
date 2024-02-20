@@ -120,13 +120,6 @@ button::-moz-focus-inner {
 .gs-promotion .gs-title .gs-promotion-title-right * {
   color: #000;
 }
-
-/* Promotion url */
-.gs-promotion .gs-visibleUrl,
-.gs-webResult .gs-visibleUrl {
-  color: #093;
-}
-
 /* Style for auto-completion table
    * .gsc-completion-selected: styling for a suggested query which the user has moused-over
    * .gsc-completion-container: styling for the table which contains the completions
@@ -1657,6 +1650,9 @@ span .gs-captcha-msg {
   cursor: pointer;
   padding: 3px;
   color: black;
+}
+.gs-webResult .gs-result {
+  padding: 8px;
 }
 
 .gs-webResult .gs-per-result-labels .gs-label.gs-labelActive {
