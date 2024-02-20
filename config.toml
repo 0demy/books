@@ -19,7 +19,7 @@ siteName = "জিরোডেমি বই"
 siteNames = [ "জিরোডেমি বই", "ZeroBooks", "0dmey Books" ]
 siteLang = "bn-BD"
 siteLogo = "https://zerodemy.com/dist/img/logo%20temporary.png"
-
+searchText = "বই খুঁজুন"
 
 
 [markup]

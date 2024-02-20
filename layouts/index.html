@@ -1,3 +1,23 @@
+{{ define "head" }}
+{{- /* JSON-LDS */ -}}
+<script type="application/ld+json">
+    {
+      "@context" : "https://schema.org",
+      "@type" : "WebSite",
+      "name" : "{{ .Site.Params.siteName}}",
+      "alternateName" : {{ .Site.Params.siteNames}},
+      "url" : "{{ .Site.Params.siteURL }}",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "{{ .Site.Params.siteURL }}search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+</script>
+{{ end }}
 {{ define "main" }}
 <div class="container">
 	{{if .Site.Home }}
@@ -6,8 +26,9 @@
 	{{if .Site.Home.Content }}
 	<section class="mt-5">
 		<h2>সকল বই</h2>
-		{{ partial "listing.html" . }} 
-		<div class="d-flex aligns-items-center justify-content-center">{{ template "_internal/pagination.html" . }}</div>
+		{{ partial "listing.html" . }}
+		<div class="d-flex aligns-items-center justify-content-center">{{ template "_internal/pagination.html" . }}
+		</div>
 	</section>
 
 	{{else}}
