@@ -1,16 +1,9 @@
-baseURL = "https://zerodemy.com"
 title = "Zerodemy Books"
-languageCode = "bn-BD"
-DefaultContentLanguage = "bn"
-defaultContentLanguage = "bn"
-defaultContentLanguageInSubdir= false
-enableMissingTranslationPlaceholders = false
 paginate = 10
-
-# Enable Google Analytics by entering your tracking id
-googleAnalytics = ""
+theme = "0demy"
 
 [params]
+  orgName = "ZeroDemy"
   siteSubTitle = "Collection of Bengali Books"
   siteSubTitleBN = "বাংলা বইয়ের সংগ্রহশালা"
   mainURL = "https://zerodemy.com/"
@@ -20,15 +13,7 @@ googleAnalytics = ""
   siteLang = "bn-BD"
   siteLogo = "https://zerodemy.com/dist/img/logo%20temporary.png"
   searchText = "বই খুঁজুন"
-
-
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
-
-[outputs]
-  home = [ "HTML", "RSS", "JSON"]
+  gsc = "https://cse.google.com/cse.js?cx=a3eaf405be35e4a4b"
 
 [taxonomies]
   genre = 'genres'
