@@ -10,9 +10,9 @@
 
  SPDX-License-Identifier: Apache-2.0
 */
-// https://www.google.com/cse/static/style/look/%{versionDir}%{versionSlash}%{theme}.css
-// https://www.google.com/cse/static/element/%{versionDir}%{versionSlash}default%{experiment}+%{lang}.css
-    var G; try { new URL("s://g"), G = !0 } catch (a) { G = !1 } var H = G; var I = "alternate author bookmark canonical cite help icon license next prefetch dns-prefetch prerender preconnect preload prev search subresource".split(" "); var J = new k(l, "https://www.google.com/cse/static/style/look/%{versionDir}%{versionSlash}%{theme}.css"), K = new k(l, "https://www.google.com/cse/static/element/%{versionDir}%{versionSlash}default%{experiment}+%{lang}.css"), B = new k(l, "https://www.google.com/cse/static/element/%{versionDir}%{versionSlash}cse_element__%{lang}.js"), L = new k(l, "/"); window.__gcse = window.__gcse || {}; window.__gcse.ct = Date.now();
+    // https://www.google.com/cse/static/style/look/%{versionDir}%{versionSlash}%{theme}.css
+    // https://www.google.com/cse/static/element/%{versionDir}%{versionSlash}default%{experiment}+%{lang}.css
+    var G; try { new URL("s://g"), G = !0 } catch (a) { G = !1 } var H = G; var I = "alternate author bookmark canonical cite help icon license next prefetch dns-prefetch prerender preconnect preload prev search subresource".split(" "); var J = new k(l, ""), K = new k(l, ""), B = new k(l, "https://www.google.com/cse/static/element/%{versionDir}%{versionSlash}cse_element__%{lang}.js"), L = new k(l, "/"); window.__gcse = window.__gcse || {}; window.__gcse.ct = Date.now();
     window.__gcse.scb = function () { var a = window.__gcse; M() || delete opts_.rawCss; var b = N(a.initializationCallback || a.callback); google.search.cse.element.init(opts_) && ("explicit" !== a.parsetags ? "complete" === document.readyState || "interactive" === document.readyState ? (google.search.cse.element.go(), null == b || b()) : google.setOnLoadCallback(function () { google.search.cse.element.go(); null == b || b() }, !0) : null == b || b()) };
     function N(a) { if ("function" === typeof a) return a; if ("string" !== typeof a) return null; a = window[a]; return "function" !== typeof a ? null : a } function M() { var a; return !(null == (a = window.__gcse) ? 0 : a.plainStyle) }
     function O(a) {
