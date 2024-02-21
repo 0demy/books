@@ -15,5 +15,10 @@ theme = "0demy"
   searchText = "বই খুঁজুন"
   gsc = "https://cse.google.com/cse.js?cx=a3eaf405be35e4a4b"
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+      
 [taxonomies]
   genre = 'genres'

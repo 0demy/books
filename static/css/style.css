@@ -1,5 +1,5 @@
 body {
-    font-family: kalpurush;
+    font-family: Noto Serif Bengali, Roboto, Helvetica, sans-serif;
 }
 
 /* Recent Books*/
@@ -10,8 +10,9 @@ body {
     border-right: 1px solid #eae8e4;
     border-bottom: 1px solid #eae8e4;
 }
+
 @media screen and (max-width: 480px) {
-   .navbar-toolbar{
-    width: 100%;
-   } 
+    .navbar-toolbar {
+        width: 100%;
+    }
 }

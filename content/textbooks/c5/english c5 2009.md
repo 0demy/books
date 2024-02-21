@@ -1,22 +1,26 @@
 ---
 title: "English For Today"
-class: ৪র্থ শ্রেণি
+class: ৫ম শ্রেণি
 ayear: ২০০৩ - ২০১১
 publisher: "NCTB"
-thumb: english c4 2009.png
+genre: 
+- textbook
+thumb: english c5 2009.png
 ---
-### Writers
-* Shaheen M Kabir
-* Amirun Nesa
-* Naina Shahzadi
-* Mahmud Ullah
+### Writers 
+* Shaheen M Kabir 
+* Amirun Nesa 
+* Naina Shahzadi 
+* Mahmud Ullah 
 ### Editor
-* Professor Khandaker Abdul Hannan
-### Experimental Edition 
-* First edition : October, 2004
-* Re-Print : August, 2009
-* Artist : Sardar Joynul Abedin
-* Computer Typesetting: Laser Scan Ltd.
+* Khandaker Abdul Hannan
+
+### First edition: October, 2005
+* Re-print: September-2009
+* Artist: Sardar Joynul Abedin
+* Proof Reading & Revising: Md. Omar Kazi
+* Computer Typesetting: Lasser Scan Ltd.
+* Designing: National Curriculum & Textbook Board
 
 **Published by National Curriculum & Textbook Board 69-70, Motijheel Commercial Area, Dhaka-1000**
 (All rights reserved by the publisher)
