@@ -19,6 +19,7 @@ theme = "0demy"
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+      hardWraps = true
       
 [taxonomies]
   genre = 'genres'
