@@ -15,14 +15,10 @@
     <div class="bg-faded-info py-5">
         <div class="py-5 container">
             <h1 class="mb-3" itemprop="name">{{ .Title }}</h1>
-            {{ if isset .Params "author" }}
-            <h3 class="mt-4 mb-1 text-body fw-light" itemscope itemprop="author" itemtype="https://schema.org/Person">
-                <span itemprop="name">{{ .Params.author }}</span>
-            </h3>
-            {{else if isset .Params "publisher" }}
-            <h3>{{ .Params.publisher }}</h3>
-            {{ end }}
-            {{ if isset .Params "ayear" }}<h6>{{ .Params.ayear }} শিক্ষাবর্ষ</h6>{{ end }}
+            {{ with .Params.author }}<h3 class="mt-4 mb-1 text-body fw-light" itemscope itemprop="author" itemtype="https://schema.org/Person"><span itemprop="name">{{ . }}</span></h3>{{ end }}
+            {{ with .Params.publisher }}<h3>{{ . }}</h3> {{end}}
+            {{ with .Params.translator }}<h3>{{ . }}</h3> {{end}}
+            {{ with .Params.ayear }}<h6>{{ . }} শিক্ষাবর্ষ</h6>{{ end }}
             {{ partial "sharethis.html" . }}
         </div>
     </div>
@@ -36,59 +32,7 @@
                 <div class="px-lg-3  pt-4 ">
                     <div class="row">
                         <div class="col-lg-3 pe-lg-0">
-                            <div class="infobox ms-auto pb-3">
-                                {{ if isset .Params "thumb" }}
-                                <img style="max-height: 550px; display: block; margin: auto; margin-bottom: 55px;"
-                                    src="{{ .Site.Params.mainURL }}/assets/img/books/{{ .Params.thumb }}">{{else if isset .Params "img"}}
-                                <img style="max-height: 550px; display: block; margin: auto; margin-bottom: 55px;"
-                                    src="{{ .Params.img }}">
-                                {{ end }}
-                                <ul class="list-unstyled fs-sm pb-2">
-                                    <li class="inf-item">
-                                        <span class="text-muted">শিরোনাম:</span>
-                                        <span class="inf-title">{{ .Params.Title }}</span>
-                                    </li>
-                                    {{ if isset .Params "author" }}
-                                    <li class="inf-item">
-                                        <span class="text-muted">রচয়িতা/লেখক:</span>
-                                        <span class="inf-title">{{ .Params.author }}</span>
-                                    </li>
-                                    {{ end }}
-                                    {{ if isset .Params "inner" }}
-                                    <li class="inf-item">
-                                        <span class="text-muted">প্রচ্ছদ:</span>
-                                        <span class="inf-title">{{ .Params.inner }}</span>
-                                    </li>
-                                    {{ end }}
-                                    {{ if isset .Params "publisher" }}
-                                    <li class="inf-item">
-                                        <span class="text-muted">প্রকাশক/প্রকাশনী:</span>
-                                        <span class="inf-title" itemscope itemprop="publisher"
-                                            itemtype="https://schema.org/Organization">{{ .Params.publisher }}</span>
-                                    </li>
-                                    {{ end }}
-                                    {{ if isset .Params "nop" }}
-                                    <li class="inf-item">
-                                        <span class="text-muted">পৃষ্ঠাসংখ্যা:</span>
-                                        <span class="inf-title" itemprop="numberOfPages"> {{ .Params.nop }}</span>
-                                    </li>
-                                    {{ end }}
-                                    {{ if isset .Params "isbn" }}
-                                    <li class="inf-item">
-                                        <span class="text-muted">ISBN:</span>
-                                        <span class="inf-title" itemprop="isbn"> {{ .Params.isbn }}</span>
-                                    </li>
-                                    {{ end }}
-                                    {{ if isset .Params "inlang" }}
-                                    <li class="inf-item">
-                                        <span class="text-muted">ভাষা:</span>
-                                        <span itemprop="inLanguage" content="{{ .Params.inlang}}">{{ .Params.inlang
-                                            }}</span>
-                                    </li>
-                                    {{ end }}
-
-                                </ul>
-                            </div>
+                            {{ partial "infobox.html" . }}
                         </div>
                         <div class="col-lg-7 pt-lg-0 ms-auto" itemprop="description" style="text-align: justify;">
                             {{ .Content }}

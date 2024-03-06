@@ -1,0 +1,52 @@
+<div class="infobox ms-auto pb-3">
+    {{ if isset .Params "thumb" }}
+    <img style="max-height: 550px; display: block; margin: auto; margin-bottom: 55px;"
+        src="{{ .Site.Params.mainURL }}/assets/img/books/{{ .Params.thumb }}">
+    {{else if isset .Params "img"}}
+    <img style="max-height: 550px; display: block; margin: auto; margin-bottom: 55px;" src="{{ .Params.img }}">
+    {{ end }}
+    <ul class="list-unstyled fs-sm pb-2">
+        <li class="inf-item">
+            <span class="text-muted">শিরোনাম:</span>
+            <span class="inf-title">{{ .Params.Title }}</span>
+        </li>
+        {{ with .Params.author }}
+        <li class="inf-item">
+            <span class="text-muted">রচয়িতা/লেখক:</span>
+            <span class="inf-title">{{ . }}</span>
+        </li>
+        {{ end }}
+        {{ with .Params.inner }}
+        <li class="inf-item">
+            <span class="text-muted">প্রচ্ছদ:</span>
+            <span class="inf-title">{{ . }}</span>
+        </li>
+        {{ end }}
+        {{ with .Params.publisher }}
+        <li class="inf-item">
+            <span class="text-muted">প্রকাশক/প্রকাশনী:</span>
+            <span class="inf-title" itemscope itemprop="publisher" itemtype="https://schema.org/Organization">{{ .
+                }}</span>
+        </li>
+        {{ end }}
+        {{ with .Params.pages }}
+        <li class="inf-item">
+            <span class="text-muted">পৃষ্ঠাসংখ্যা:</span>
+            <span class="inf-title" itemprop="numberOfPages"> {{ . }}</span>
+        </li>
+        {{ end }}
+        {{ with .Params.isbn }}
+        <li class="inf-item">
+            <span class="text-muted">ISBN:</span>
+            <span class="inf-title" itemprop="isbn"> {{ . }}</span>
+        </li>
+        {{ end }}
+        {{ with .Params.inlang }}
+        <li class="inf-item">
+            <span class="text-muted">ভাষা:</span>
+            <span itemprop="inLanguage" content="{{ . }}">{{ . }}</span>
+        </li>
+        {{ end }}
+
+    </ul>
+</div>

@@ -1,1 +1,6 @@
-{{ if ne .Description ""}}{{ .Description }}{{- else -}}{{ .Summary | truncate 300 }}">{{- end }}
+{{- if ne .Description "" -}}
+{{ .Description }}
+{{- else -}}
+{{ .Title}}{{with .Params.author }} | লেখক/রচয়িতা: {{.}}{{ end }}{{ with .Params.class }} {{.}}{{ end }}{{ with .Params.ayear}} {{.}} শিক্ষাবর্ষ{{ end }}
+{{ with .Params.titleEN }}{{.}}{{ end }}{{with .Params.authorEN }} | Author: {{.}}{{ end }}{{ with .Params.classEN }} {{.}}{{ end }}{{ with .Params.ayearEN}} {{.}} Academic Year{{ end }}
+{{- end -}}
