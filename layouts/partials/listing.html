@@ -1,28 +1,23 @@
-<ul itemscope itemtype="https://schema.org/BreadcrumbList"
-    class="books-list list-unstyled row row-cols-2 no-gutters row-cols-md-3 row-cols-lg-5 row-cols-wd-6 border-top border-left my-0">
-    {{ range $index, $page := .Paginator.Pages }}
-    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="book-item">
+<ul class="books-list list-unstyled row row-cols-2 no-gutters row-cols-md-3 row-cols-lg-5 row-cols-wd-6 border-top border-left my-0">
+    {{ range .Paginator.Pages }}
+    <li class="book-item">
         <div class="overflow-hidden bg-white p-3 h-100">
             <div class="wrapper d-block position-relative h-100">
-                <a itemprop="item" href="{{- $page.Permalink -}}" class="d-block">
-                    <img alt="Cover of the book {{ $page.Title }}" class="ml-auto  mx-auto d-block"
-                        src='{{if isset $page.Params "thumb"}} {{ .Site.Params.mainURL }}/assets/img/books/{{ $page.Params.thumb }} {{else if isset $page.Params "img"}}  {{ $page.Params.img }} {{ else }}https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnSJ4EHEjSc0tnEn6ZFtNomhsEy-ORV79y7Gu3Yob9rQ&s{{end}}'
+                <a href="{{ .Permalink }}" class="d-block">
+                    <img alt="Cover of the book {{ .Title }}" class="ml-auto  mx-auto d-block"
+                        src='{{if isset .Params "thumb"}} {{ .Site.Params.mainURL }}/assets/img/books/{{ .Params.thumb }} {{else if isset .Params "img"}}  {{ .Params.img }} {{ else }}https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnSJ4EHEjSc0tnEn6ZFtNomhsEy-ORV79y7Gu3Yob9rQ&s{{end}}'
                         style="width: 150px; height: 210px;">
                     <div class="books-desc pt-3 text-center">
-                        <h4 class="book-name" itemprop="name">{{ $page.Title }}{{- if isset $page.Params "class"}} -- {{
-                            $page.Params.class }}{{end}}</h4>
-                        {{- if isset $page.Params "author" -}}
-                        <h5>{{ $page.Params.author }}</h5>
-                        {{- else if isset $page.Params "publisher" -}}
-                        <h5>{{ $page.Params.publisher }}</h5>
+                        <h4 class="book-name">{{ .Title }}{{- with .Params.class }} -- {{.}}{{end}}</h4>
+                        {{- if isset .Params "author" -}}
+                        <h5>{{ .Params.author }}</h5>
+                        {{- else if isset .Params "publisher" -}}
+                        <h5>{{ .Params.publisher }}</h5>
                         {{- end -}}
-                        {{- if isset $page.Params "translator" -}}
-                        {{ $page.Params.translator }}
-                        {{ end }}
-                        {{- if isset $page.Params "ayear" }}<h6>{{ $page.Params.ayear }} শিক্ষাবর্ষ</h6>{{- end -}}
+                        {{- with .Params.translator -}}{{ . }}{{ end }}
+                        {{- with .Params.ayear }}<h6>{{ . }} শিক্ষাবর্ষ</h6>{{- end -}}
                     </div>
                 </a>
-                <meta itemprop="position" content="{{ printf " %d" (add $index 1) }}" />
             </div>
         </div>
     </li>
