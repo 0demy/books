@@ -4,6 +4,8 @@ class: ৩য় শ্রেণি
 ayear: ২০০৩ - ২০১১
 publisher: "NCTB"
 thumb: english for today c3 2009.png
+genres: 
+- textbook
 ---
 ### Writers
 * Shaheen M Kabir 

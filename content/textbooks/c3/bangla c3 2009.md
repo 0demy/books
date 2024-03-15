@@ -4,6 +4,8 @@ class: ৩য় শ্রেণি
 ayear: ২০০৩ - ২০১১
 publisher: "NCTB"
 thumb: amar bangla boi c3 2009.png
+genres: 
+- textbook
 ---
 ### সংকলন ও রচনা
 * আহমদ কবির

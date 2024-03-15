@@ -4,6 +4,8 @@ class: ১ম শ্রেণি
 ayear: ২০০৩ - ২০১১
 publisher: "NCTB"
 thumb: english for today c1 2009.png
+genres: 
+- textbook
 ---
 ### Writers
 * Dr S M Fazlul Haque 

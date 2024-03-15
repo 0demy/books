@@ -1,7 +1,13 @@
+baseURL = "https://books.zerodemy.com"
+languageCode = "bn-BD"
+DefaultContentLanguage = "bn"
+defaultContentLanguage = "bn"
+defaultContentLanguageInSubdir= false
+enableMissingTranslationPlaceholders = false
+
 title = "Zerodemy Books"
 paginate = 10
 theme = "0demy"
-defaultContentLanguage = 'bn'
 
 [params]
   orgName = "ZeroDemy"
@@ -24,3 +30,6 @@ defaultContentLanguage = 'bn'
       
 [taxonomies]
   genre = 'genres'
+
+[outputs]
+  home = [ "HTML", "RSS", "JSON"]

@@ -6,4 +6,6 @@ publisher: "NCTB"
 inlang: "bn-BD"
 genre: "TextBook"
 thumb: islam siksha c3 2009.png
+genres: 
+- textbook
 ---

@@ -8,7 +8,7 @@
 	{{ end }}
 	{{if .Site.Home.Content }}
 	<section class="mt-5">
-		<h2>সকল বই</h2>
+		<h2>{{i18n "allbooks" }}</h2>
 		{{ partial "listing.html" . }}
 		<div class="d-flex aligns-items-center justify-content-center">{{ template "_internal/pagination.html" . }}
 		</div>
