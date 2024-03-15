@@ -2,5 +2,5 @@
 {{ .Description }}
 {{- else -}}
 {{ .Title}}{{with .Params.author }} | লেখক/রচয়িতা: {{.}}{{ end }}{{ with .Params.class }} {{.}}{{ end }}{{ with .Params.ayear}} {{.}} শিক্ষাবর্ষ{{ end }}
-{{ with .Params.titleEN }}{{.}}{{ end }}{{with .Params.authorEN }} | Author: {{.}}{{ end }}{{ with .Params.classEN }} {{.}}{{ end }}{{ with .Params.ayearEN}} {{.}} Academic Year{{ end }}
+{{- with .Params.titleEN }}{{.}}{{ end }}{{with .Params.authorEN }} | Author: {{.}}{{ end }}{{ with .Params.classEN }} {{.}}{{ end }}{{ with .Params.ayearEN}} {{.}} Academic Year{{ end }}{{ with .Params.ayearEN}} {{.}} {{i18n "ayear"}}{{ end }}
 {{- end -}}

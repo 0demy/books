@@ -1,6 +1,7 @@
 title = "Zerodemy Books"
 paginate = 10
 theme = "0demy"
+defaultContentLanguage = 'bn'
 
 [params]
   orgName = "ZeroDemy"

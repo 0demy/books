@@ -1,24 +1,14 @@
-{{ define "head" }}
-<script src='https://www.metype.com/quintype-metype/assets/metype.js'></script>
-<script type='text/javascript'>
-  window.talktype = window.talktype || function (f) {
-    if (talktype.loaded)
-      f();
-    else
-      (talktype.q = talktype.q || []).push(arguments);
-  };
-</script>
-{{ end }}
 {{ define "main" }}
 <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Book" itemid="{{ .Permalink }}"
     style="height: auto !important;">
     <div class="bg-faded-info py-5">
         <div class="py-5 container">
-            <h1 class="mb-3" itemprop="name">{{ .Title }}</h1>
+            <h1 class="mb-3" itemprop="name">{{ .Title }} {{ with .Params.class }}: {{.}}{{ end }}</h1>
             {{ with .Params.author }}<h3 class="mt-4 mb-1 text-body fw-light" itemscope itemprop="author" itemtype="https://schema.org/Person"><span itemprop="name">{{ . }}</span></h3>{{ end }}
             {{ with .Params.publisher }}<h3>{{ . }}</h3> {{end}}
             {{ with .Params.translator }}<h3>{{ . }}</h3> {{end}}
-            {{ with .Params.ayear }}<h6>{{ . }} শিক্ষাবর্ষ</h6>{{ end }}
+            {{ with .Params.ayear }}<h6>{{ . }} {{i18n "ayear" }}</h6>{{ end }}
+            {{ partial "seo.breadcrumb.html" . }}
             {{ partial "sharethis.html" . }}
         </div>
     </div>

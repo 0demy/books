@@ -1,7 +1,10 @@
 ---
-title: "সবটুকুই মুহাম্মাদ"
+title: "সবটুকুই মুহাম্মদ"
+titleEN : Sobtukui Muhammad
 author: "এফ. ডব্লিউ. বুরলেই"
+authorEN: F. W. Burlei
 translator: "মুফতি আব্দুল্লাহ আল মাসুদ, সাফিয়া বিনতে হুয়াই"
+translatorEN: "Abdullah Al Masud"
 img: "https://blogger.googleusercontent.com/img/a/AVvXsEh5d2csBdcKyvsaGHprKO6Rg1HGljXJR0YPmtsfYU0_-f2ZAscaRyVkYtZ3BwwLbOxRffuLhJLaovV6h6jw4w0up8ZVw_QY2bp2dt_uF-7olk4IfPvJixtmX1-D-QWpcDUH2HO6FUiIP2wsdTMOKpH0xALjmB2m_Uv1Sz7KIzxHuIn-Nm27LWc1D-vY=s16000"
 dlink: https://drive.google.com/file/d/1x-g9nxxWcoigDPE_YJgqym33jvJCtCc8/view
 ---

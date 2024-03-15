@@ -1,3 +1,0 @@
-{{- block "title" . -}}
-{{ .Title}}{{ with .Params.author }} - {{.}}{{ end }}{{ with .Params.class }} {{.}}{{ end }}{{ with .Params.ayear}} {{.}} শিক্ষাবর্ষ{{ end }} {{if eq .Kind "page" }}(PDF/EPUB) {{ end }} 
-{{- end -}}
